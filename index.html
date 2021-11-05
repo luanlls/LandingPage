@@ -317,17 +317,35 @@
 
     <script>
 
+        botaoAtivo2 : Boolean = false;
+        botaoAtivo3 : Boolean = false;
+
         function mudarBotao1() {
             document.getElementById('botaoCor1').style.color = "#FF0000	";
         }
 
         function mudarBotao2() {
-            document.getElementById('botaoCor2').style.color = "#FF0000	";
+            if(!this.botaoAtivo2){
+                document.getElementById('botaoCor2').style.color = "#FF0000	";
+                this.botaoAtivo2 = true;
+            } else {
+                document.getElementById('botaoCor2').style.color = "#FFFFFF";
+                this.botaoAtivo2 = false;
+            }
+            
         }
 
         function mudarBotao3() {
-            document.getElementById('botaoCor3').style.color = "#FF0000	";
+            if(!this.botaoAtivo3){
+                document.getElementById('botaoCor3').style.color = "#FF0000	";
+                this.botaoAtivo3 = true;
+            } else {
+                document.getElementById('botaoCor3').style.color = "#FFFFFF";
+                this.botaoAtivo3 = false;
+            }
         }
+
+
     </script>
 
 </body>
